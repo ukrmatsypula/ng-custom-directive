@@ -7,18 +7,5 @@ import { SafeLinkDirective } from '../safe-link.directive';
   styleUrl: './learning-resources.component.css',
   standalone: true,
   imports: [SafeLinkDirective],
-  host: {
-    '(click)': 'onConfirmLeavePage($event)',
-  },
 })
-export class LearningResourcesComponent {
-  onConfirmLeavePage(event: MouseEvent) {
-    const wantsToLeave = confirm('Do you want to leave app?');
-
-    if (wantsToLeave) {
-      return;
-    }
-
-    event.preventDefault();
-  }
-}
+export class LearningResourcesComponent {}
